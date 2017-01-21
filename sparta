@@ -1,0 +1,57 @@
+from pydub import AudioSegment
+from eyed3 import id3
+
+Alone = AudioSegment.from_mp3("Alone.mp3")
+Controlla = AudioSegment.from_mp3("Controlla.mp3")
+DNA = AudioSegment.from_mp3("DNA.mp3")
+donald_trump = AudioSegment.from_mp3("donald_trump.mp3")
+Harder_Better_Faster_Stronger = AudioSegment.from_mp3("Harder_Better_Faster_Stronger.mp3")
+Heartless = AudioSegment.from_mp3("heartless.mp3")
+hyperparadise = AudioSegment.from_mp3("hyperparadise.mp3")
+Juicy = AudioSegment.from_mp3("Juicy.mp3")
+Collard_Greens = AudioSegment.from_mp3("Collard_Greens.mp3")
+Roses = AudioSegment.from_mp3("Roses.mp3")
+The_Hills = AudioSegment.from_mp3("The_Hills.mp3")
+Wet_Sand = AudioSegment.from_mp3("Wet_Sand.mp3")
+You_And_Me = AudioSegment.from_mp3("you_and_me.mp3")
+
+
+
+tag = id3.Tag()
+tag.parse("Alone.mp3")
+
+print("BPM of Alone: ", tag.bpm)
+
+
+
+
+
+# pydub does things in milliseconds
+#ten_seconds = 28.1 * 1000
+#end_seconds = 55 * 1000
+
+
+#first_10_seconds = song[:ten_seconds]
+
+#last_5_seconds = song2[48000:end_seconds]
+
+
+# boost volume by 6dB
+#beginning = first_10_seconds + 2
+#end = last_5_seconds
+
+
+#without_the_middle = beginning + end
+
+
+# 1.5 second crossfade
+#with_style = beginning.append(end, crossfade=500)
+
+# repeat the clip twice
+#do_it_over = with_style
+
+# 2 sec fade in, 3 sec fade out
+#awesome = do_it_over.fade_in(2000).fade_out(3000)
+
+
+#awesome.export("mashup.mp3", format="mp3", tags={'artist': 'Drew Glapa', 'album': 'SPARTAHACK',})
